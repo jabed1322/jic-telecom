@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>জে আই টেলিকম এন্ড কম্পিউটার</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #005599;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 20px;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .product-gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .whatsapp-button {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>জে আই টেলিকম এন্ড কম্পিউটার</h1>
+    <p>আপনার আস্থার প্রযুক্তি পার্টনার</p>
+  </header>
+
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#services">সেবা সমূহ</a>
+    <a href="#gallery">পণ্যের ছবি</a>
+    <a href="#reviews">গ্রাহক মতামত</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+
+  <section id="home">
+    <div class="card">
+      <h2>স্বাগতম!</h2>
+      <p>আমাদের এখানে মোবাইল ও কম্পিউটার সার্ভিসিং, এক্সেসরিজ বিক্রয়, সফটওয়্যার সেটআপ এবং ইন্টারনেট সংক্রান্ত সমাধান পাওয়া যায়।</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="card">
+      <h2>আমাদের সম্পর্কে</h2>
+      <p>জে আই টেলিকম এন্ড কম্পিউটার একটি বিশ্বস্ত প্রযুক্তি সেবা প্রদানকারী প্রতিষ্ঠান। আমরা আধুনিক সেবা এবং পণ্য দিয়ে গ্রাহকের আস্থা অর্জন করেছি।</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="card">
+      <h2>সেবা সমূহ</h2>
+      <ul>
+        <li>কম্পিউটার/ল্যাপটপ সার্ভিস</li>
+        <li>মোবাইল রিপেয়ার</li>
+        <li>এক্সেসরিজ বিক্রয়</li>
+        <li>ইন্টারনেট সেটআপ ও সফটওয়্যার সাপোর্ট</li>
+        <li>Custom-built PC বিক্রি ও ইনস্টলেশন</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="card">
+      <h2>পণ্যের ছবি</h2>
+      <div class="product-gallery">
+        <img src="https://via.placeholder.com/200x150?text=Router" alt="রাউটার">
+        <img src="https://via.placeholder.com/200x150?text=Keyboard" alt="কী-বোর্ড">
+        <img src="https://via.placeholder.com/200x150?text=Mouse" alt="মাউস">
+        <img src="https://via.placeholder.com/200x150?text=Monitor" alt="মনিটর">
+        <img src="https://via.placeholder.com/200x150?text=PC+Build" alt="পিসি বিল্ড">
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="card">
+      <h2>গ্রাহক মতামত</h2>
+      <blockquote>
+        “খুব দ্রুত সার্ভিস, ভালো ব্যবহার।” — রুবেল হোসেন
+      </blockquote>
+      <blockquote>
+        “রাউটার কিনে খুব সন্তুষ্ট, ধন্যবাদ জে আই টেলিকম।” — শিউলি আক্তার
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>যোগাযোগ</h2>
+      <p>ফোন: ০১৮৪৯৪৭৭৫৮৪</p>
+      <p>ঠিকানা: ২নং গেইট, চিটাগাং শপিং কমপ্লেক্স এর পিছনে, চট্টগ্রাম।</p>
+      <p>ফেসবুক পেজ: <a href="https://www.facebook.com/profile.php?id=61578745010272" target="_blank">facebook.com/ji.telecom</a></p>
+      <a class="whatsapp-button" href="https://wa.me/8801849477584" target="_blank">WhatsApp এ যোগাযোগ করুন</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; ২০২৫ জে আই টেলিকম এন্ড কম্পিউটার। সর্বস্বত্ব সংরক্ষিত।</p>
+  </footer>
+</body>
+</html>
