@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>দৈনন্দিন হিসাব</title>
+  <style>
+    body { font-family: kalpurush, sans-serif; background: #f9f9f9; padding: 20px; }
+    h1 { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background: #ddd; }
+    input[type="text"], input[type="number"] {
+      width: 100%; padding: 5px;
+    }
+    .section { background: #fff; padding: 10px; margin-bottom: 30px; box-shadow: 0 0 5px #ccc; }
+  </style>
+</head>
+<body>
+
+  <h1>দৈনন্দিন আয়-খরচ হিসাব</h1>
+
+  <div class="section">
+    <h2>আয়</h2>
+    <table id="incomeTable">
+      <tr><th>তারিখ</th><th>বিবরণ</th><th>টাকা</th></tr>
+    </table>
+    <input type="text" id="incomeDesc" placeholder="বিবরণ">
+    <input type="number" id="incomeAmount" placeholder="টাকা">
+    <button onclick="addIncome()">আয় যোগ করুন</button>
+  </div>
+
+  <div class="section">
+    <h2>খরচ</h2>
+    <table id="expenseTable">
+      <tr><th>তারিখ</th><th>বিবরণ</th><th>টাকা</th></tr>
+    </table>
+    <input type="text" id="expenseDesc" placeholder="বিবরণ">
+    <input type="number" id="expenseAmount" placeholder="টাকা">
+    <button onclick="addExpense()">খরচ যোগ করুন</button>
+  </div>
+
+  <div class="section">
+    <h2>সারাংশ</h2>
+    <p>মোট আয়: <span id="totalIncome">0</span> টাকা</p>
+    <p>মোট খরচ: <span id="totalExpense">0</span> টাকা</p>
+    <p><strong>মোট ব্যালেন্স: <span id="balance">0</span> টাকা</strong></p>
+  </div>
+
+  <script>
+    let totalIncome = 0;
+    let totalExpense = 0;
+
+    function addIncome() {
+      const desc = document.getElementById("incomeDesc").value;
+      const amount = parseFloat(document.getElementById("incomeAmount").value);
+      if (!desc || isNaN(amount)) return;
+
+      const table = document.getElementById("incomeTable");
+      const row = table.insertRow(-1);
+      row.innerHTML = `<td>${new Date().toLocaleDateString()}</td><td>${desc}</td><td>${amount}</td>`;
+
+      totalIncome += amount;
+      updateSummary();
+    }
+
+    function addExpense() {
+      const desc = document.getElementById("expenseDesc").value;
+      const amount = parseFloat(document.getElementById("expenseAmount").value);
+      if (!desc || isNaN(amount)) return;
+
+      const table = document.getElementById("expenseTable");
+      const row = table.insertRow(-1);
+      row.innerHTML = `<td>${new Date().toLocaleDateString()}</td><td>${desc}</td><td>${amount}</td>`;
+
+      totalExpense += amount;
+      updateSummary();
+    }
+
+    function updateSummary() {
+      document.getElementById("totalIncome").innerText = totalIncome;
+      document.getElementById("totalExpense").innerText = totalExpense;
+      document.getElementById("balance").innerText = totalIncome - totalExpense;
+    }
+  </script>
+
+</body>
+</html>
